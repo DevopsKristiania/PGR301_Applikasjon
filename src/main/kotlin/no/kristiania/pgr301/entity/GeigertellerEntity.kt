@@ -1,19 +1,20 @@
 package no.kristiania.pgr301.entity
 
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.Id
-import javax.persistence.Table
+import javax.persistence.*
+import javax.validation.constraints.NotBlank
 
 @Entity
-@Table(name = "customer")
+@Table(name = "Geigerteller")
 class GeigertellerEntity(
-        @Id
-        val id: Long = -1,
 
-        @Column(name = "firstname")
-        val firstName: String = "",
+        @Column(name = "Navn")
+        @get:NotBlank(message = "Champion Name cannot be left blank")
+        var name: String,
 
-        @Column(name = "lastname")
-        val lastName: String = ""
+        @Column(name = "Pris")
+        @get:NotBlank(message = "Champion Name cannot be left blank")
+        var price: Int,
+
+        @get:Id @get:GeneratedValue
+        var id: Long? = null
 )

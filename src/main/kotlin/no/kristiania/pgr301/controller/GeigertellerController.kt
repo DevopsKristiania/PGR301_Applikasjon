@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RequestMapping(path = ["/devices"])
 @RestController
-class CustomerController(val repo: GeigertellerRepo) {
+class GeigertellerController(val repo: GeigertellerRepo) {
 
     // Dont forget to change github user when comitting to github
     @GetMapping
