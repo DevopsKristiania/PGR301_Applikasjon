@@ -9,6 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner
 @SpringBootTest
 class ApplicationTests {
 
+	// Default test when creating a Spring application. Test if Spring loads from right configuration
 	@Test
 	fun contextLoads() {
 	}

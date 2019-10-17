@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
-@RequestMapping(path = ["/api/devices"])
+@RequestMapping(path = ["/devices"])
 @RestController
 class CustomerController(val repo: GeigertellerRepo) {
 
