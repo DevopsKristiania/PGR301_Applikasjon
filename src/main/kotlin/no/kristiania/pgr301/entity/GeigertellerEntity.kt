@@ -2,17 +2,18 @@ package no.kristiania.pgr301.entity
 
 import javax.persistence.*
 import javax.validation.constraints.NotBlank
+import javax.validation.constraints.NotNull
 
 @Entity
 @Table(name = "Geigerteller")
 class GeigertellerEntity(
 
         @Column(name = "Navn")
-        @get:NotBlank(message = "Champion Name cannot be left blank")
+        @get:NotBlank(message = "Geigerteller navn kan ikke være blank")
         var name: String,
 
         @Column(name = "Pris")
-        @get:NotBlank(message = "Champion Name cannot be left blank")
+        @get:NotNull(message = "Geigerteller navn kan ikke være null")
         var price: Int,
 
         @get:Id @get:GeneratedValue

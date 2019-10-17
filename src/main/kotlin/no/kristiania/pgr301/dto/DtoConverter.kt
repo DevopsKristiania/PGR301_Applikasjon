@@ -1,3 +1,4 @@
+import no.kristiania.pgr301.dto.GeigertellerDto
 import no.kristiania.pgr301.entity.GeigertellerEntity
 import org.springframework.data.jpa.domain.AbstractPersistable_.id
 

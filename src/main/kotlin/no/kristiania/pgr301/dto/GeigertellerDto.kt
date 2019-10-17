@@ -1,3 +1,5 @@
+package no.kristiania.pgr301.dto
+
 data class GeigertellerDto(
 
         var name: String? = null,

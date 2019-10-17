@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1 #JDBC URL: jdbc:h2:mem:db
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      # Do not create the schema with Hibernate, but rather
+      # check if your current Entities do match what in the
+      # current existing schema (which would be created by
+      # Flyway here the first time the migration is run)
+      ddl-auto: create-drop
+    database: h2
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  flyway:
+    baseline-on-migrate: true
+
