@@ -21,7 +21,7 @@ import org.hamcrest.Matchers.*
 @SpringBootTest(classes = [(Application::class)],
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ApplicationTests {
-
+    /*
     @LocalServerPort
     protected var port = 0
 
@@ -35,7 +35,7 @@ class ApplicationTests {
     fun initTest() {
         Assert.assertNotNull(repo)
     }
-
+       */
     // Default test when creating a Spring application. Test if Spring loads from right configuration
     @Test
     fun contextLoads() {
