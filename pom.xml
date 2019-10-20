@@ -50,11 +50,6 @@
 			<artifactId>xml-path</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.jboss.resteasy</groupId>
-			<artifactId>resteasy-client</artifactId>
-			<scope>test</scope>
-		</dependency>
 
 
 		<!-- KOTLIN -->
