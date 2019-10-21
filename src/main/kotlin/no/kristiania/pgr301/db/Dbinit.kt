@@ -1,5 +1,6 @@
 package no.kristiania.pgr301.db
 
+import no.kristiania.pgr301.entity.GeigertellerEntity
 import no.kristiania.pgr301.repository.GeigertellerRepo
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service

@@ -17,7 +17,6 @@
 		<java.version>1.8</java.version>
 		<kotlin.version>1.2.71</kotlin.version>
 		<version.restassured>4.0.0</version.restassured>
-		<version.testcontainers>1.12.2</version.testcontainers>
 	</properties>
 
 	<dependencies>
@@ -35,6 +34,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 		<!-- REST ASSURED for testing rest api-->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
@@ -82,24 +82,6 @@
 			<version>5.2.4</version>
 		</dependency>
 		-->
-		<!-- Junit-->
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<version>5.5.2</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-		</dependency>
-		<dependency>
-			<!-- To support JUnit 5  -->
-			<groupId>org.testcontainers</groupId>
-			<artifactId>junit-jupiter</artifactId>
-			<version>${version.testcontainers}</version>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -135,6 +117,7 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+
 		</plugins>
 	</build>
 

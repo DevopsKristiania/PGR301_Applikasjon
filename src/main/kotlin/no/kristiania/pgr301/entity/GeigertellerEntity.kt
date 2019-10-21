@@ -1,4 +1,4 @@
-package no.kristiania.pgr301.db
+package no.kristiania.pgr301.entity
 
 import javax.persistence.*
 import javax.validation.constraints.NotBlank
