@@ -40,14 +40,15 @@ class ApplicationTest {
     @Autowired
     protected lateinit var myDbinit: Dbinit
 
-    // ** REST Assured tester for å teste Rest API
+    // ** REST Assured tester for å teste Rest API **
+
+    // Test the size of data our database
     @Test
     fun testSizeOfDb() {
         given().get("/devices").then()
                 .statusCode(200)
                 .body("size()", CoreMatchers.equalTo(3))
     }
-
 
     // Default test when creating a Spring application. Test if Spring loads from right configuration
     @Test

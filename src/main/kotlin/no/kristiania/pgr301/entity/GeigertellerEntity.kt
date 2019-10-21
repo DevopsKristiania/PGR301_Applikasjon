@@ -5,7 +5,7 @@ import javax.validation.constraints.NotBlank
 import javax.validation.constraints.NotNull
 
 @Entity
-@Table(name = "Geigerteller")
+@Table(name = "Geigerteller") // select * from geigerteller
 class GeigertellerEntity(
 
         @Column(name = "Navn")

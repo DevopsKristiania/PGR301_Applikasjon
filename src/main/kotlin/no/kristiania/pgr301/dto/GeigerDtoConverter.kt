@@ -1,7 +1,7 @@
 import no.kristiania.pgr301.dto.GeigertellerDto
 import no.kristiania.pgr301.entity.GeigertellerEntity
 
-class DtoConverter {
+class GeigerDtoConverter {
 
     companion object {
 
@@ -14,8 +14,8 @@ class DtoConverter {
         }
 
 
-        fun transform(champions: Iterable<GeigertellerEntity>): List<GeigertellerDto> {
-            return champions.map { transform(it) }
+        fun transform(geigerEntity: Iterable<GeigertellerEntity>): List<GeigertellerDto> {
+            return geigerEntity.map { transform(it) }
         }
     }
 }
