@@ -7,15 +7,6 @@ import io.restassured.http.ContentType
 import no.kristiania.pgr301.db.Dbinit
 import no.kristiania.pgr301.repository.GeigertellerRepo
 import org.hamcrest.CoreMatchers
-import org.junit.Assert
-//import org.junit.Test
-/*
-import org.junit.jupiter.api.AfterEach
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.extension.ExtendWith
-
- */
-
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.web.server.LocalServerPort
@@ -23,24 +14,25 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 import javax.validation.constraints.AssertTrue
 import io.restassured.matcher.RestAssuredMatchers.*
 import org.hamcrest.Matchers.*
+import org.junit.Before
 import org.junit.BeforeClass
 import org.junit.Test
-import java.awt.print.Book
+import org.junit.runner.RunWith
+import org.springframework.test.context.junit4.SpringRunner
 
-//@ExtendWith(SpringExtension::class)
+
+@RunWith(SpringRunner::class)
 @SpringBootTest(classes = [(Application::class)],
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ApplicationTest {
 
+    @LocalServerPort var port = 0
 
-   // @BeforeEach
-    //@AfterEach
+    @Before
     fun initRestAssured() {
         RestAssured.baseURI = "http://localhost"
-        RestAssured.port = 8080
+        RestAssured.port = port
     }
-
-    @LocalServerPort protected var port = 8080
 
     @Autowired
     protected lateinit var repo: GeigertellerRepo
@@ -48,7 +40,7 @@ class ApplicationTest {
     @Autowired
     protected lateinit var myDbinit: Dbinit
 
-    // NOTE start Application.kt før du kjører disse testene lokalt. Ikke noe problem med Travis, da den starter applikasjonen
+    // ** REST Assured tester for å teste Rest API
     @Test
     fun testSizeOfDb() {
         given().get("/devices").then()
@@ -61,7 +53,5 @@ class ApplicationTest {
     @Test
     fun contextLoads() {
     }
-
-
 
 }
