@@ -12,11 +12,12 @@
 	<artifactId>PGR301_Applikasjon</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>PGR301_Applikasjon</name>
-	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
 		<kotlin.version>1.2.71</kotlin.version>
+		<version.restassured>4.0.0</version.restassured>
+		<version.testcontainers>1.12.2</version.testcontainers>
 	</properties>
 
 	<dependencies>
@@ -34,20 +35,23 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- testing Rest Assured-->
+		<!-- REST ASSURED for testing rest api-->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
+			<version>${version.restassured}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>json-path</artifactId>
+			<version>${version.restassured}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>xml-path</artifactId>
+			<version>${version.restassured}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -88,6 +92,13 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
+		</dependency>
+		<dependency>
+			<!-- To support JUnit 5  -->
+			<groupId>org.testcontainers</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>${version.testcontainers}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

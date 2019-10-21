@@ -1,5 +1,5 @@
 import no.kristiania.pgr301.dto.GeigertellerDto
-import no.kristiania.pgr301.entity.GeigertellerEntity
+import no.kristiania.pgr301.db.GeigertellerEntity
 
 class DtoConverter {
 

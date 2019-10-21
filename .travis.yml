@@ -1,5 +1,8 @@
+## Det skal lages en CI/CDpipeline for applikasjonen ved hjelp av Travis CI.
+#  CI(Continuous Integration)
 language: java
 install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
   - mvn test
+# CD(Continuous Deployment to heroku) todo

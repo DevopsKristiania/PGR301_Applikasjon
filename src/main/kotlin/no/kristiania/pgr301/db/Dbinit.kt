@@ -1,13 +1,13 @@
 package no.kristiania.pgr301.db
 
-import no.kristiania.pgr301.entity.GeigertellerEntity
 import no.kristiania.pgr301.repository.GeigertellerRepo
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import javax.annotation.PostConstruct
 
 @Service
-class Dbinit(@Autowired val myGeigertellerRepo: GeigertellerRepo) {
+class Dbinit(
+        @Autowired val myGeigertellerRepo: GeigertellerRepo) {
 
     @PostConstruct
     fun initGeigertellerAtStartup() {
