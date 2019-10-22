@@ -12,13 +12,13 @@ data class MeasurementDto(
         var id: String? = null,
 
         @get:NotNull
-        var Sievert: Int? = null,
+        var Sievert: String? = null,
 
         @get:NotNull
         var Lat: String? = null,
 
         @get:NotNull
-        var Lng: Double?
+        var Lng: String?
 
 
 )

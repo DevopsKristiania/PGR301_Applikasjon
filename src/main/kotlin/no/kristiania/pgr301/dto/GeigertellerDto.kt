@@ -16,7 +16,11 @@ data class GeigertellerDto(
 
 
         @get:NotNull
-        var id: String? = null
+        var id: String? = null,
+
+
+        @get:NotNull
+        var deviceId: String? = null
 
 
 )

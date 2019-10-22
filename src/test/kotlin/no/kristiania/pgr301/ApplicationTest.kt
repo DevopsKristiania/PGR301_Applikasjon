@@ -40,9 +40,9 @@ class ApplicationTest {
     @Autowired
     protected lateinit var myDbinit: Dbinit
 
-    // ** REST Assured tester for å teste Rest API **
+    // ** REST Assured tests for testing REST API**
 
-    // Test the size of data our database
+    // Test the size of data our database, which has 3 entries
     @Test
     fun testSizeOfDb() {
         given().get("/devices").then()

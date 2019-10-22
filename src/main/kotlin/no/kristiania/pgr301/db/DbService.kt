@@ -8,8 +8,8 @@ import javax.persistence.EntityManager
 
 @Service
 @Transactional
-class DbService {
-    @Autowired
-    private val em: EntityManager? = null
+class DbService(
+        private val em: EntityManager? = null
+) {
 
 }

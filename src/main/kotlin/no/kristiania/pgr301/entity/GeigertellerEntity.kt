@@ -17,5 +17,8 @@ class GeigertellerEntity(
         var price: Int,
 
         @get:Id @get:GeneratedValue
-        var id: Long? = null
+        var id: Long? = null,
+
+
+        var deviceId: String? = null
 )

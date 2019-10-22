@@ -11,7 +11,7 @@ class MeasurementEntity(
        // Almost all who receive a dose of 10 sieverts will die within weeks.
         @Column(name = "Sievert")
         @get:NotNull
-        var Sievert: Int,
+        var Sievert: String,
 
         // Example chernobyl Latitude: 51.3870 N
         @Column(name = "Lat")
@@ -21,7 +21,7 @@ class MeasurementEntity(
         // Liquefied Natural Gas: 0.220
         @Column(name = "Lng")
         @get:NotNull
-        var Lng: Double,
+        var Lng: String,
 
         @get:Id
         @get:GeneratedValue

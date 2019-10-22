@@ -12,8 +12,8 @@ class GeigerDtoConverter {
             return GeigertellerDto(
                     name = myGeigertellerEntity.name,
                     id = myGeigertellerEntity.id?.toString(),
-                    price = myGeigertellerEntity.price
-                   // deviceId = myGeigertellerEntity.deviceId?.toString()
+                    price = myGeigertellerEntity.price,
+                    deviceId = myGeigertellerEntity.deviceId
             )
         }
 
