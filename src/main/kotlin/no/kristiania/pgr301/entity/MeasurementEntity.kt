@@ -23,8 +23,10 @@ class MeasurementEntity(
         @get:NotNull
         var Lng: Double,
 
-        @get:Id @get:GeneratedValue
+        @get:Id
+        @get:GeneratedValue
         var id: Long? = null
+
 
 )
 

@@ -7,9 +7,11 @@ class MeasurementDtoConverter {
 
         fun transform(myMeasurementEntity: MeasurementEntity): MeasurementDto {
             return MeasurementDto(
+                    id = myMeasurementEntity.id?.toString(),
                     Sievert = myMeasurementEntity.Sievert,
                     Lat = myMeasurementEntity.Lat,
                     Lng = myMeasurementEntity.Lng
+
             )
         }
 

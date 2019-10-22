@@ -10,7 +10,10 @@ import javax.annotation.PostConstruct
 
 @Service
 class Dbinit(
-        @Autowired val myGeigertellerRepo: GeigertellerRepo, @Autowired val myMeasurementRepo: MeasurementRepo ) {
+        @Autowired val myGeigertellerRepo: GeigertellerRepo,
+        @Autowired val myMeasurementRepo: MeasurementRepo
+
+) {
 
     @PostConstruct
     fun initGeigertellerAtStartup() {
@@ -24,7 +27,10 @@ class Dbinit(
     @PostConstruct
     fun initMeasurementAtStartup() {
         myMeasurementRepo.run {
-            save(MeasurementEntity(Sievert = 1000, Lng = 0.220, Lat = "51.3870 N"))
+            save(MeasurementEntity(Sievert = 1000, Lng = 0.810, Lat = "21.3870 N"))
+            save(MeasurementEntity(Sievert = 60, Lng = 0.920, Lat = "31.3870 N"))
+            save(MeasurementEntity(Sievert = 30, Lng = 0.220, Lat = "51.3870 N"))
         }
     }
+
 }
