@@ -8,8 +8,5 @@ script:
 deploy:
   provider: heroku
   app: terraform-heroku-stage # have to be exactly like app name in heroku
-  on:
-    repo: DevopsKristiania/PGR301_infrastruktur
-    all_branches: true
   api_key:
     secure: lmR/TrAjxCQjrFY8Nyxek/gOOVGr8s0XVo+JLdhyss4mLzDhwHqHIzrf5p7F7oYVDoykty99NAQ2199AJVt/tMJfaNwmhw1TvxwYn5wj01EurEfLH/r6wgxhwutp2qhh/M2ks14yjpcHTWxmebNIwNBoHmi2Vi7iXzsUtNkUNMHccYjRXSk5JoqB29RnY270m30B6Dc/efChUVJ4bv+bneBgbuNLAs5F6Ebvh+m3D5UsST7bUL0tYP/nmZi0Yfeq5JaoDxZmnvgTVhXcJfXD4lUi2GAzrBsZUSJXi5env5WpIumkrAQPD97cDxUBIo3jcqj5d6edV/CLZYzrdMbNO9oCgPnFT+BrMW4M5pHmN05nlKae0HkwUfRfkSrinPUJxz3X2J/GUaF+w/U/za/P5GyQmEjXlRVJXH1APwDKWEhKMLosXrDNBYujzZD4u4gd2SVvJpmk5ySUX80udmaUmSqdI6QFoJWisr/OG/8aISvZp9yJs3idg83jHSDX/PJSrfnSpOIz3uC3oOTQx+N7LxtFaTzWLjOvQe1MwDadLrkvG+VQ+piDIJhwtUQlL6KMXx+AlexKET81rGjbrCidF8IFhWTM/2izOXCP8dgSuYkRim3NXLgufsFZCzGThAfCBUzC8lKkEbovq/bZcywK1mv+/mzVn/9xiCW4v4WUzSc=
