@@ -1,3 +1,4 @@
+# https://github.com/travis-ci/travis-ci/issues/10018 on repo
 language: java
 install:
 - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
