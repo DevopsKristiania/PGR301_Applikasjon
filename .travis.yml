@@ -1,8 +1,10 @@
-## Det skal lages en CI/CDpipeline for applikasjonen ved hjelp av Travis CI.
-#  CI(Continuous Integration)
 language: java
 install:
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+- mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
-  - mvn test
-# CD(Continuous Deployment to heroku) todo
+- mvn test
+deploy:
+  provider: heroku
+  app: pgr301_infastruktur
+  api_key:
+    secure: ffVja59PPm6DCLG0euJTtscqVbLXoSE0S424oLcnaDuAjd+Xj4iwv7nWXghpd7Nsvmqu2m1oHsNAnYuZNEcOJ9+MvL7wxNxnw18z9TpvSeVS+aotQR1AYi2siP+Pac0m8y+SIOD/M1JVVwXVBiGrBorK8uzPoMfa69aRXW/9oHZRe4IBiPESm+xbhPEoMylit18wyz4cdqFUJHGmuVnnTedwEkfCQ4RE/aWgYazRoCDRR4nb1Pl9+ylt87MZyPNMC0lEZu2Lj9/Qq3QZxbXJOoCTo4QdcP810IJ09/ZQDk1lO/kEz+fU4FtTh7QAVj5JHZJxkhxTvEXWkQIjaZiKnmcDbLHV9e37L2lyPM9rRfS6LWf6nFQFUOD4/rAlXgNPk5rL+nsaTv+FngsX+ZpjWiNFurnHWc8WKwKVVSNAmHL0d/6e27CnAnhxw3Q4zOYctBoTN6q9nuu6I4UouV4KeM14mx3Ks46I7g58bZu1EI/mWxSOE/ra8a8lzY6F1/7LFbHaKxPeGgkhRiQ+4jM9Wc+36J0XUF6xR9NROLWEaGJTkl3OD54VQnZhWS8GSZW688DY/eYgnIxEAxjDaMUm6OEbBdjslh2zBP7ZL4+2+8XHOORkBQUnPnBBiTx/jrIsNrYX8BvtAH8D1xCW6AT4Pys1t/CzR89stSR49L2+fFA=
