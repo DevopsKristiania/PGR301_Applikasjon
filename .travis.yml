@@ -9,8 +9,8 @@ services:
   - docker
 script:
   - mvn test
-  - docker build --tag myimage .
-  - docker run myimage
+  - docker build --tag myimage . # sørger for at Travis bygger et nytt Docker image
+  #- docker run myimage # kjører image
 deploy:
   provider: heroku
   app: terraform-heroku-development # have to be exactly like app name in heroku
