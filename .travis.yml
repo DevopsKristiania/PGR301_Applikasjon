@@ -6,6 +6,7 @@ services:
 script:
 - mvn test
 - docker build --tag devopskristiania/pgr301exam .
+#- docker run devopskristiania/pgr301exam
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
 deploy:
