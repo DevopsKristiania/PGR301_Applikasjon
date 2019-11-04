@@ -1,4 +1,4 @@
- #PGR301_applikasjon
+## PGR301_applikasjon
 
 Denne repositorien tilsvarer applikasjons koden til eksamen i emnet PGR301_2019 DevOps i skyen.
 Applikasjonen er en springboot-applikasjon skrevet i Kotlin. 
