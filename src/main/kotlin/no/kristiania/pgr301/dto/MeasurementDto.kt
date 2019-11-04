@@ -18,7 +18,7 @@ data class MeasurementDto(
         var Lat: String? = null,
 
         @get:NotNull
-        var Lng: String?
+        var Lng: String? = null
 
 
 

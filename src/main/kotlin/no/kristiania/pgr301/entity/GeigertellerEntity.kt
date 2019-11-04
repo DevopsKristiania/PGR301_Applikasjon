@@ -14,7 +14,7 @@ class GeigertellerEntity(
 
         @Column(name = "Pris")
         @get:NotNull(message = "Geigerteller navn kan ikke være null")
-        var price: Int,
+        var price: String,
 
         @get:Id @get:GeneratedValue
         var id: Long? = null,

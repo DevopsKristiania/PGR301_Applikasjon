@@ -13,7 +13,5 @@ COPY ${JAR_FILE} PGR301_Applikasjon.jar
 ENTRYPOINT ["java","-jar","PGR301_Applikasjon.jar"]
 
 # det jeg kjørte for å bygge --> docker build -t pgr301_applikasjon .
-# run the app with:  docker run -p 8080:8080 pgr301_applikasjon in Docker-toolbox. Trenger bare denne commandoen
+# run the app with:  docker run -p 8080:8080 pgr301_applikasjon in Docker/Docker-toolbox
 # http://192.168.99.102:8080/devices to access page
-
-#TODO: Last opp til Docker Hub https://www.callicoder.com/spring-boot-docker-example/ step 5.

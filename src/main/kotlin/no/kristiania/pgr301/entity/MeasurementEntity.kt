@@ -5,7 +5,7 @@ import javax.persistence.*
 import javax.validation.constraints.NotNull
 
 @Entity
-@Table(name = "Measurement") // select * from measurment
+@Table(name = "Measurement") // select * from Measurement
 class MeasurementEntity(
 
        // Almost all who receive a dose of 10 sieverts will die within weeks.
@@ -23,10 +23,6 @@ class MeasurementEntity(
         @get:NotNull
         var Lng: String,
 
-        @get:Id
-        @get:GeneratedValue
+        @get:Id @get:GeneratedValue
         var id: Long? = null
-
-
 )
-

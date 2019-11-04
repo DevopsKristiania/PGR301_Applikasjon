@@ -18,9 +18,9 @@ class Dbinit(
     @PostConstruct
     fun initGeigertellerAtStartup() {
         myGeigertellerRepo.run {
-            save(GeigertellerEntity(name = "X-1000", price = 7000,deviceId = "K076"))
-            save(GeigertellerEntity(name = "V-9000", price = 5000,deviceId = "B5f39"))
-            save(GeigertellerEntity(name = "V-4300", price = 2000,deviceId = "A5839"))
+            save(GeigertellerEntity(name = "X-1000", price = "7000",deviceId = "K076"))
+            save(GeigertellerEntity(name = "V-9000", price = "5000",deviceId = "B5f39"))
+            save(GeigertellerEntity(name = "V-4300", price = "2000",deviceId = "A5839"))
         }
     }
 

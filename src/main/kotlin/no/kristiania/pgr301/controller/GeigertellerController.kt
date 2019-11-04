@@ -13,12 +13,8 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import java.net.URI
 
-
-// Dont forget to change github user when comitting to github
-
 //@RequestMapping(path = ["/devices"])
 @RestController
-//@RequestMapping(path = ["/devices"])
 class GeigertellerController(
         val repo: GeigertellerRepo,
         val measurementRepo: MeasurementRepo
@@ -31,7 +27,7 @@ class GeigertellerController(
 
     /**
      * 1. REST Endepunkt for ny geigerteller. Svare på POST til /devices og returnere et objekt med en unik identifikator "deviceId"
-     * Example usage H2: INSERT INTO geigerteller VALUES (4,'af467', 'XYZ-1279', 9000);
+     * Example usage H2: INSERT INTO geigerteller VALUES (4,'AF467', 'XYZ-1279', 9000);
      * You can now see the new device at http://localhost:8080/devices
      */
     @PostMapping(path = ["/devices"], consumes = [MediaType.APPLICATION_JSON_VALUE])
@@ -66,7 +62,7 @@ class GeigertellerController(
     /**
      * Note: Her brukes id og ikke deviceId for å lage ny måling... :(
      * 2. REST Endepunkt for ny måling av stråling og lokasjon (lat, lng, sievert). POST /devices/{deviceId}/measurements
-     * Example usage H2: INSERT INTO measurement VALUES (7,'af467', 'XYZ-1279', 9000);
+     * Example usage H2: INSERT INTO measurement VALUES (7,'10.00 N', '0.35', 500)
      * http://localhost:8080/devices/7/measurements
      */
     @PostMapping(path = ["/devices/{deviceId}/measurements"])
@@ -77,6 +73,7 @@ class GeigertellerController(
 
         return ResponseEntity.created(URI.create("/devices" + newMeasurementEntity.id)).build()
     }
+
 
     /**
      * 3. REST Endepunkt for å hente en eller flere målinger for en device. GET til /devices/{id}/measurements

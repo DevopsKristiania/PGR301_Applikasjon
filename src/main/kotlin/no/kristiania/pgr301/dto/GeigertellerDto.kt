@@ -12,7 +12,7 @@ data class GeigertellerDto(
         var name: String? = null,
 
         @get:NotNull
-        var price: Int? = null,
+        var price: String? = null,
 
 
         @get:NotNull
